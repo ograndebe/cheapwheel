@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cheapwheel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+    <label for="drawbar1" class="form-label">Drawbar 1</label>
+    <input type="range" class="form-range drawbar" min="0" max="9" step="1" id="drawbar1" change="changeDrawbar">
+    <label for="drawbar2" class="form-label">Drawbar 2</label>
+    <input type="range" class="form-range drawbar" min="0" max="9" step="1" id="drawbar2" change="changeDrawbar">
+    <label for="drawbar3" class="form-label">Drawbar 3</label>
+    <input type="range" class="form-range drawbar" min="0" max="9" step="1" id="drawbar3" change="changeDrawbar">
+    <label for="drawbar4" class="form-label">Drawbar 4</label>
+    <input type="range" class="form-range drawbar" min="0" max="9" step="1" id="drawbar4" change="changeDrawbar">
+    <label for="drawbar5" class="form-label">Drawbar 5</label>
+    <input type="range" class="form-range drawbar" min="0" max="9" step="1" id="drawbar5" change="changeDrawbar">
+    <label for="drawbar6" class="form-label">Drawbar 6</label>
+    <input type="range" class="form-range drawbar" min="0" max="9" step="1" id="drawbar6" change="changeDrawbar">
+    <label for="drawbar7" class="form-label">Drawbar 7</label>
+    <input type="range" class="form-range drawbar" min="0" max="9" step="1" id="drawbar7" change="changeDrawbar">
+    <label for="drawbar8" class="form-label">Drawbar 8</label>
+    <input type="range" class="form-range drawbar" min="0" max="9" step="1" id="drawbar8" change="changeDrawbar">
+    <label for="drawbar9" class="form-label">Drawbar 9</label>
+    <input type="range" class="form-range drawbar" min="0" max="9" step="1" id="drawbar9" change="changeDrawbar">
+    
+    <div class="btn-group" role="group" aria-label="Leslie">
+        <button type="button" class="btn btn-primary">Start</button>
+        <button type="button" class="btn btn-primary">slow</button>
+        <button type="button" class="btn btn-primary">fast</button>
+    </div>
+
+    <script>
+        console.log("abriu");
+
+        function changeDrawbar(ev) {
+            console.log('change drawbar');
+            console.log(`val: ${ev.target.value} id: ${ev.target.id}`);
+        }
+
+        function start() {
+            const elements = document.querySelectorAll('.drawbar');
+            elements.forEach(comp=>comp.addEventListener('change', changeDrawbar));
+        }
+        start();
+    </script>
+</body>
+</html>
